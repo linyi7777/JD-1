@@ -91,6 +91,18 @@ docker run -dit \
    --restart always \
    nevinee/jd:v4
 ```
+命令
+```
+docker exec jd jtask   # 运行scripts脚本
+docker exec jd otask   # 运行own脚本
+docker exec jd mtask   # 运行你自己的脚本，如果某些own脚本识别不出来cron，你也可以自行添加mtask任务
+docker exec jd jlog    # 删除旧日志
+docker exec jd jup     # 更新所有脚本，up=update，如果在jup后增加一个参数"shell", 或"scripts", 或"own"则可以控制只更新该类脚本
+docker exec jd jcode   # 导出所有互助码
+docker exec jd jcsv    # 记录豆豆变化情况
+docker exec jd hangup  # 运行挂机程序
+```
+
 #青龙部署
 ```
 docker run -dit \
